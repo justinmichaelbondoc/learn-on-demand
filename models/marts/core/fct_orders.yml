@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: ""
+    columns:
+      - name: order_id
+        data_type: number
+        description: ""
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        data_type: number
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: amount
+        data_type: number
+        description: ""
+        data_tests:
+          - greater_than_five
+
+exposures:
+  - name: jaffle_shop_weekly_metrics
+    label: Jaffle Shop Weekly Metrics
+    description: Weekly order metrics for Jaffle system
+    owner:
+      name: Justin
+    type: dashboard
+    maturity: high
+    url: https://youtube.com
+    depends_on:
+      - ref('fct_orders')

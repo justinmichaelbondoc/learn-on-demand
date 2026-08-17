@@ -13,6 +13,10 @@ sources:
               tests:
                 - unique
                 - not_null
+            - name: first_name
+              description: First name of the customer.
+              tests:
+                - not_null
 
         - name: orders
           description: Raw orders data.
