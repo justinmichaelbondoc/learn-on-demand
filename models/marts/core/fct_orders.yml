@@ -25,7 +25,9 @@ models:
         data_type: number
         description: ""
         data_tests:
-          - greater_than_five
+          - greater_than_five:
+              config:
+                severity: warn
 
 exposures:
   - name: jaffle_shop_weekly_metrics

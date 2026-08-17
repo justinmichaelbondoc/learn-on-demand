@@ -10,6 +10,7 @@
 
       strategy='timestamp',
       updated_at='updated_at',
+      enabled=false,
     )
 }}
 

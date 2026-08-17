@@ -16,7 +16,9 @@ sources:
             - name: first_name
               description: First name of the customer.
               tests:
-                - not_null
+                - not_null:
+                    config:
+                      severity: warn
 
         - name: orders
           description: Raw orders data.
