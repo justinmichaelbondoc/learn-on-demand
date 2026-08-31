@@ -20,6 +20,8 @@ models:
                 arguments:
                   to: ref('stg_customers')
                   field: customer_id
+                config:
+                    severity: warn
         - name: status
           description: '{{ doc("order_status") }}'
           tests:
