@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="id", model=get_where_subquery(source('jaffle_shop', 'customers'))) }}

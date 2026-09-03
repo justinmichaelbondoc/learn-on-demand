@@ -1,1 +1,0 @@
-{{ test_greater_than_five(column_name="amount", model=get_where_subquery(ref('fct_orders'))) }}{{ config({"meta":{},"severity":"WARN","tags":[]}) }}
