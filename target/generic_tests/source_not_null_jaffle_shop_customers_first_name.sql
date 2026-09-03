@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="first_name", model=get_where_subquery(source('jaffle_shop', 'customers'))) }}{{ config({"meta":{},"severity":"WARN","tags":[]}) }}
