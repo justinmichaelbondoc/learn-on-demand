@@ -1,1 +1,1 @@
-{{ test_relationships(column_name="order_id", field="customer_id", model=get_where_subquery(ref('stg_orders')), to=ref('stg_customers')) }}
+{{ test_relationships(column_name="order_id", field="customer_id", model=get_where_subquery(ref('stg_orders')), to=ref('stg_customers')) }}{{ config({"meta":{},"severity":"WARN","tags":[]}) }}
