@@ -27,3 +27,6 @@ final as (
     left join customer_orders using (customer_id)
 )
 select * from final
+
+
+-- test change to trigger CI build for query-comment investigation
