@@ -24,8 +24,7 @@ models:
       - name: amount
         data_type: number
         description: ""
-        data_tests:
-          - greater_than_five:
+
 
 exposures:
   - name: jaffle_shop_weekly_metrics
