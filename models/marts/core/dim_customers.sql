@@ -30,3 +30,5 @@ select * from final
 
 
 -- test change to trigger CI build for query-comment investigation
+
+-- test change again
