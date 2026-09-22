@@ -15,7 +15,7 @@ order_payments as (
     group by 1
 ),
 
-finale as (
+final as (
 
     select
         orders.order_id,
@@ -27,4 +27,4 @@ finale as (
     left join order_payments using (order_id)
 )
 
-select * from finale
+select * from final
