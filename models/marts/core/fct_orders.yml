@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fct_orders
-    description: "Test"
+    description: ""
     columns:
       - name: order_id
         data_type: number
