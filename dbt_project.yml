@@ -30,8 +30,10 @@ models:
   jaffle_shop:
     staging:
       +materialized: view
+      +group: staging
     marts:
       +materialized: table
+      +group: marts
 flags:
   require_generic_test_arguments_property: true
   validate_macro_args: true
