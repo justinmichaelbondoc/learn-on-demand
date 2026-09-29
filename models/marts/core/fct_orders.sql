@@ -15,7 +15,7 @@ order_payments as (
     group by 1
 ),
 
-final as (
+finale as (
 
     select
         orders.order_id,
@@ -27,4 +27,8 @@ final as (
     left join order_payments using (order_id)
 )
 
-select * from final
+select * from finale
+
+-- test change to trigger CI build for query-comment investigation
+
+--testing again lemon

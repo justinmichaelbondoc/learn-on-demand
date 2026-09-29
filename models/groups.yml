@@ -1,0 +1,9 @@
+groups:
+  - name: staging
+    owner:
+      name: "Justin Bondoc"
+      email: justin.bondoc@fivetran.com
+  - name: marts
+    owner:
+      name: "Justin Bondoc"
+      email: justin.bondoc@fivetran.com
