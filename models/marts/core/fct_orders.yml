@@ -2,29 +2,34 @@ version: 2
 
 models:
   - name: fct_orders
-    description: ""
+    description: >
+      One row per order, combining the order's customer and order date with its
+      total successful payment amount. Orders without a successful payment are
+      retained and have an amount of zero.
+
     columns:
       - name: order_id
         data_type: number
-        description: ""
+        description: Primary key for the order, sourced from the Jaffle Shop application.
         data_tests:
           - unique
           - not_null
 
       - name: customer_id
         data_type: number
-        description: ""
+        description: Identifier for the customer who placed the order.
         data_tests:
           - not_null
 
       - name: order_date
         data_type: date
-        description: ""
+        description: Date on which the order was placed.
 
       - name: amount
         data_type: number
-        description: ""
-
+        description: >
+          Total successful payment amount for the order in dollars. Orders without
+          a successful payment have an amount of zero.
 
 exposures:
   - name: jaffle_shop_weekly_metrics
