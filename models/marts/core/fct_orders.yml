@@ -28,7 +28,7 @@ models:
       - name: amount
         data_type: number
         description: >
-          Total successful payment amount for the order in dollars. Orders without
+          AARON IS AWESOME Total successful payment amount for the order in dollars. Orders without
           a successful payment have an amount of zero.
 
 exposures:
