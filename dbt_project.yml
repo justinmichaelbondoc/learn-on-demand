@@ -34,6 +34,7 @@ models:
     marts:
       +materialized: table
       +group: marts
+      +schema: marts
 flags:
   require_generic_test_arguments_property: true
   validate_macro_args: true
