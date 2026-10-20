@@ -38,3 +38,4 @@ models:
 flags:
   require_generic_test_arguments_property: true
   validate_macro_args: true
+  cache_selected_only: true
