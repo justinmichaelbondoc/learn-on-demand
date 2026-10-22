@@ -14,6 +14,8 @@ profile: 'default'
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 macro-paths: ["macros"]
+seed-paths: ["data"]
+
 snapshot-paths: ["snapshots"]
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
@@ -28,12 +30,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   jaffle_shop:
+    +static_analysis: strict
     staging:
       +materialized: view
       +group: staging
     marts:
       +materialized: table
       +group: marts
-flags:
-  require_generic_test_arguments_property: true
-  validate_macro_args: true

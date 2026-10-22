@@ -33,3 +33,17 @@ models:
                     - returned
                     - placed
                     - return_pending
+
+    - name: stg_employees
+      description: Staged employee data, passed through directly from the employees seed.
+      columns:
+        - name: employee_id
+          description: Primary key for employees.
+          tests:
+            - unique
+            - not_null
+        - name: email
+          description: Employee email address.
+        - name: customer_id
+          description: Foreign key to the customer this employee is linked to.
+
