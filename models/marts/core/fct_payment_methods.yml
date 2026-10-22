@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fct_payment_methods
+    description: >
+      One row per order with its payment amount broken out by payment method,
+      a total across all methods, and a rank of orders by total payment amount.
+    columns:
+      - name: order_id
+        description: Primary key for the order.
+        data_tests:
+          - unique
+          - not_null
+      - name: bank_transfer_amount
+        description: Amount paid via bank transfer, in dollars.
+      - name: credit_card_amount
+        description: Amount paid via credit card, in dollars.
+      - name: coupon_amount
+        description: Amount paid via coupon, in dollars.
+      - name: gift_card_amount
+        description: Amount paid via gift card, in dollars.
+      - name: total_amount
+        description: Sum of all payment method amounts for the order.
+      - name: payment_amount_rank
+        description: Rank of the order by total payment amount, highest first.
