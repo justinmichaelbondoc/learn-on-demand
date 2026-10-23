@@ -29,8 +29,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  +static_analysis: strict
   jaffle_shop:
-    +static_analysis: strict
     staging:
       +materialized: view
       +group: staging
@@ -39,10 +39,20 @@ models:
       +group: marts
 
 seeds:
-  jaffle_shop:
-    +static_analysis: strict
+  +static_analysis: strict
 
 snapshots:
-  jaffle_shop:
-    +static_analysis: strict
+  +static_analysis: strict
+
+sources:
+  +static_analysis: strict
+
+analyses:
+  +static_analysis: strict
+
+data_tests:
+  +static_analysis: strict
+
+unit_tests:
+  +static_analysis: strict
 
