@@ -37,3 +37,12 @@ models:
     marts:
       +materialized: table
       +group: marts
+
+seeds:
+  jaffle_shop:
+    +static_analysis: strict
+
+snapshots:
+  jaffle_shop:
+    +static_analysis: strict
+
