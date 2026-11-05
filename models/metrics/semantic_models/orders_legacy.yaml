@@ -1,0 +1,32 @@
+semantic_models:
+  - name: orders_legacy
+    description: |
+      Legacy-spec semantic model (top-level `semantic_models:` key) used to
+      reproduce the dbt1157 SemanticModelDeprecated warning on Fusion.
+    model: ref('fct_orders')
+    defaults:
+      agg_time_dimension: order_date
+    entities:
+      - name: order_id
+        type: primary
+      - name: customer
+        type: foreign
+        expr: customer_id
+    dimensions:
+      - name: order_date
+        type: time
+        type_params:
+          time_granularity: day
+    measures:
+      - name: order_total
+        description: Total successful payment amount for the order.
+        agg: sum
+        expr: amount
+
+metrics:
+  - name: total_order_amount
+    label: Total order amount
+    description: Sum of order amounts (legacy metric spec).
+    type: simple
+    type_params:
+      measure: order_total
