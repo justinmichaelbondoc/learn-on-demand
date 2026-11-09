@@ -1,3 +1,3 @@
-{% macro slow(seconds=300) %}
+{% macro slow(seconds=120) %}
     {% do run_query("call system$wait(" ~ seconds ~ ")") %}
 {% endmacro %}
